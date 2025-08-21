@@ -1,14 +1,21 @@
-body,
-html {
+/* Reset + base */
+html,
+body {
     margin: 0;
     padding: 0;
-    /* height: 100%; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100%;
 }
 
+/* Hero section background */
 #hero {
-    background: linear-gradient(to bottom, #109D9F, #0A393A);
+    background: url("/gear.png") no-repeat center top fixed,
+        linear-gradient(to bottom, #109D9F, #0A393A);
+    background-size: cover;
     color: white;
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
 }
 
 #hero h1 {
@@ -22,6 +29,7 @@ html {
     color: #d1e6e6;
 }
 
+/* Navbar */
 .navbar {
     background: transparent;
 }
@@ -40,38 +48,32 @@ html {
     color: #d1e6e6;
 }
 
-.info-box {
-    background-color: white;
-    color: black;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    font-size: 1rem;
-}
-
+/* Info boxes (glassmorphism) */
+.info-box,
 .info-box-1 {
-    background-color: rgba(61, 186, 187, 0.4);
-    color: black;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: 20px;
     font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    /* Glass look */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
+.info-box h5,
 .info-box-1 h5 {
     color: white;
 }
 
-.info-box p {
-    color: black;
-}
-
+.info-box p,
 .info-box-1 p {
-    color: black;
+    color: #f1f1f1;
 }
 
+/* Buttons */
 .btn-custom {
     background-color: #109D9F;
     color: white;
@@ -83,20 +85,8 @@ html {
     background-color: #0A393A;
 }
 
-.info-box,
-.info-box-1 {
-    position: relative;
-}
-
+/* Section padding */
 #hero .container {
     padding-top: 60px;
     padding-bottom: 60px;
-}
-
-.another {
-    background-color: #B9FBF5;
-    padding-top: 100px;
-    min-height: 100vh;
-    position: relative;
-    z-index: 1;
 }
